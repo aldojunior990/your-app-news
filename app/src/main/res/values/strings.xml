@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">YourNewsApp</string>
+    <string name="for_you_title">Para voce</string>
+    <string name="favorites_title">Favoritos</string>
+
+</resources>
