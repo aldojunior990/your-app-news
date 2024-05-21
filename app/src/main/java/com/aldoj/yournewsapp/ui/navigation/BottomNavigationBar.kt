@@ -3,6 +3,7 @@ package com.aldoj.yournewsapp.ui.navigation
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
@@ -30,16 +31,21 @@ sealed class BottomBarItem(@StringRes val title: Int, val route: String, val ico
         icon = Icons.Filled.Person
     )
 
+    data object Top : BottomBarItem(
+        title = R.string.top_news, route = AppGraph.main.TOP_NEWS_SCREEN, icon = Icons.Filled.Star
+    )
+
     data object Favorites : BottomBarItem(
         title = R.string.favorites_title,
         route = AppGraph.main.FAVORITES_SCREEN,
-        icon = Icons.Filled.Star
+        icon = Icons.Filled.Favorite
     )
 }
 
 object BottomBarConfigList {
     val list = listOf(
         BottomBarItem.ForYou,
+        BottomBarItem.Top,
         BottomBarItem.Favorites,
     )
 }
@@ -76,8 +82,7 @@ fun BottomNavigationBar(
                     },
                     icon = {
                         Icon(
-                            imageVector = it.icon,
-                            contentDescription = "icon-bottom-bar"
+                            imageVector = it.icon, contentDescription = "icon-bottom-bar"
                         )
                     },
                     onClick = { if (currentRoute != it.route) navController.navigate(it.route) })

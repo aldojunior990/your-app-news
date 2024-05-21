@@ -2,5 +2,8 @@
     <string name="app_name">YourNewsApp</string>
     <string name="for_you_title">Para voce</string>
     <string name="favorites_title">Favoritos</string>
+    <string name="add_themes_presentation_text">Escolha seus temas e comece  a receber noticias!</string>
+    <string name="to_start">Começar</string>
+    <string name="top_news">Principais Noticias</string>
 
 </resources>
