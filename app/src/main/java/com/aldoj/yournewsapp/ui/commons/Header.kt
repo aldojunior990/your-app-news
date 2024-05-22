@@ -29,7 +29,7 @@ fun Header(title: String, onBack: () -> Unit = {}) {
                     titleContentColor = MaterialTheme.colorScheme.primary,
                     navigationIconContentColor = MaterialTheme.colorScheme.onBackground
                 ),
-                title = { Text(text = title, style = MaterialTheme.typography.titleLarge) },
+                title = { Text(text = title, style = MaterialTheme.typography.headlineMedium) },
                 navigationIcon = {
                     IconButton(onClick = { onBack() }) {
                         Icon(

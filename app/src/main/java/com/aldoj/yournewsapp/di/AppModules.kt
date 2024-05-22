@@ -2,9 +2,11 @@ package com.aldoj.yournewsapp.di
 
 import com.aldoj.yournewsapp.network.NewsService
 import com.aldoj.yournewsapp.repositories.NewsRepository
+import com.aldoj.yournewsapp.ui.viewmodels.ForYouViewModel
 import com.aldoj.yournewsapp.ui.viewmodels.TopNewsViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
@@ -31,5 +33,6 @@ val repositoriesModule = module {
 
 val viewModelsModule = module {
     viewModelOf(::TopNewsViewModel)
+    viewModelOf(::ForYouViewModel)
 }
 

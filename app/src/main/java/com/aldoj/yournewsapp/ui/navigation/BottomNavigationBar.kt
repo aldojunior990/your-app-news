@@ -35,18 +35,12 @@ sealed class BottomBarItem(@StringRes val title: Int, val route: String, val ico
         title = R.string.top_news, route = AppGraph.main.TOP_NEWS_SCREEN, icon = Icons.Filled.Star
     )
 
-    data object Favorites : BottomBarItem(
-        title = R.string.favorites_title,
-        route = AppGraph.main.FAVORITES_SCREEN,
-        icon = Icons.Filled.Favorite
-    )
 }
 
 object BottomBarConfigList {
     val list = listOf(
         BottomBarItem.ForYou,
         BottomBarItem.Top,
-        BottomBarItem.Favorites,
     )
 }
 

@@ -1,5 +1,6 @@
 [versions]
 agp = "8.4.0"
+compose = "1.0.0-beta01"
 converterGson = "2.9.0"
 koinAndroid = "3.5.0"
 koinAndroidxCompose = "3.5.0"
@@ -12,13 +13,16 @@ lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.9.0"
 composeBom = "2023.08.00"
 loggingInterceptor = "4.12.0"
+material = "1.6.7"
 navigationCompose = "2.7.7"
 okhttp = "4.12.0"
 squareupRetrofit = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+compose = { module = "com.github.bumptech.glide:compose", version.ref = "compose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

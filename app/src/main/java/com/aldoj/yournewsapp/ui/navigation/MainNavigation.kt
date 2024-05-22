@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.aldoj.yournewsapp.ui.screens.favorite_screen.FavoriteScreen
 import com.aldoj.yournewsapp.ui.screens.for_you_screen.ForYouScreen
 import com.aldoj.yournewsapp.ui.screens.top_news_screen.TopNewsScreen
 
@@ -24,9 +23,6 @@ fun MainNavigationGraph(navController: NavHostController) {
             enterTransition = { fadeIn() + slideInHorizontally() }) {
             composable(AppGraph.main.FOR_YOU_SCREEN) {
                 ForYouScreen()
-            }
-            composable(AppGraph.main.FAVORITES_SCREEN) {
-                FavoriteScreen()
             }
             composable(AppGraph.main.TOP_NEWS_SCREEN) {
                 TopNewsScreen(navController = navController)
